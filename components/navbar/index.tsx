@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import {
   NavigationMenu,
@@ -6,11 +6,11 @@ import {
   NavigationMenuItem,
   NavigationMenuList,
   NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu"
-import Link from "next/link"
-import { useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { HiMenuAlt3, HiOutlineX } from "react-icons/hi"
+} from "@/components/ui/navigation-menu";
+import Link from "next/link";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { HiMenuAlt3, HiOutlineX } from "react-icons/hi";
 
 const products = [
   {
@@ -48,12 +48,12 @@ const products = [
     description:
       "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
   },
-]
+];
 
 export function Navbar() {
-  const [isMenuVisible, setMenuVisible] = useState(false)
+  const [isMenuVisible, setMenuVisible] = useState(false);
 
-  const toggleMenu = () => setMenuVisible(!isMenuVisible)
+  const toggleMenu = () => setMenuVisible(!isMenuVisible);
 
   return (
     <div className="flex items-center justify-between px-8 py-4">
@@ -87,7 +87,7 @@ export function Navbar() {
                             {product.description}
                           </p>
                         </Link>
-                      )
+                      );
                     })}
                   </ul>
                 </NavigationMenuContent>
@@ -111,7 +111,7 @@ export function Navbar() {
                             {product.description}
                           </p>
                         </Link>
-                      )
+                      );
                     })}
                   </ul>
                 </NavigationMenuContent>
@@ -194,7 +194,7 @@ export function Navbar() {
                                 {product.description}
                               </p>
                             </Link>
-                          )
+                          );
                         })}
                       </ul>
                     </NavigationMenuContent>
@@ -218,7 +218,7 @@ export function Navbar() {
                                 {product.description}
                               </p>
                             </Link>
-                          )
+                          );
                         })}
                       </ul>
                     </NavigationMenuContent>
@@ -251,5 +251,5 @@ export function Navbar() {
         </AnimatePresence>
       </div>
     </div>
-  )
+  );
 }
