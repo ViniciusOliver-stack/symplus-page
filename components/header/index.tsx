@@ -1,10 +1,10 @@
-import Link from "next/link"
-import Image from "next/image"
-import { TabsProducts } from "../tabsProducts"
+import Link from "next/link";
+import Image from "next/image";
+import { TabsProducts } from "../tabsProducts";
 
 export function Header() {
   return (
-    <div className="absolute w-full select-none mt-12">
+    <div className=" w-full select-none mt-12">
       <div className="h-[80vh]">
         <div className="relative left-0 top-0">
           <Image
@@ -51,5 +51,5 @@ export function Header() {
 
       <TabsProducts />
     </div>
-  )
+  );
 }
