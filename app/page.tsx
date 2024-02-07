@@ -1,8 +1,9 @@
-"use client"
+"use client";
 
 import { Cards } from "@/components/cards"
 import { Header } from "@/components/header"
 import { Navbar } from "@/components/navbar"
+import { Newsletter } from "@/components/newsletter";
 import { TabsProducts } from "@/components/tabsProducts"
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
       <Navbar />
       <Header />
       <Cards />
+      <Newsletter />
     </div>
-  )
+  );
 }
