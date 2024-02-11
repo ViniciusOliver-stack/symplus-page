@@ -1,55 +1,47 @@
-import Link from "next/link";
-import Image from "next/image";
-import { TabsProducts } from "../tabsProducts";
+import { motion } from "framer-motion"
+import React, { useState } from "react"
 
 export function Header() {
+  const numSquares = Math.floor(window.innerWidth / 75)
+
+  const squares = Array.from({ length: numSquares }, (_, i) => i)
+
+  const [hoveredIndex, setHoveredIndex] = useState(null)
+
   return (
-    <div className=" w-full select-none mt-12">
-      <div className="h-[80vh]">
-        <div className="relative left-0 top-0">
-          <Image
-            src="/bubble.svg"
-            alt=""
-            width={300}
-            height={705}
-            className="w-[150px] md:w-[300px]"
-          />
-        </div>
-
-        <div className="relative bottom-[350px] md:bottom-[550px] w-[85%] m-auto pt-24">
-          <div className="container mx-auto px-4">
-            <div className="flex flex-col md:flex-row items-center justify-between">
-              <div className="flex flex-col gap-6 text-center md:text-left">
-                <h1 className="max-w-[500px] text-4xl 2xl:max-w-[700px] 2xl:text-5xl">
-                  Lorem ipsum spreadsheets{" "}
-                  <span className="text-blue-600">dolor sit ame consectet</span>{" "}
-                  adipiscing elit customer
-                </h1>
-
-                <p className="max-w-[500px] 2xl:max-w-[700px] text-lg">
-                  Otimize seus processos de trabalho para fazer mais juntos e
-                  mais rápido, e fique à frente da concorrência.
-                </p>
-
-                <div>
-                  <Link
-                    href="/contact"
-                    className="inline-block bg-[#3370FF] text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-all duration-150"
-                  >
-                    Entre em contato
-                  </Link>
-                </div>
-              </div>
-
-              <div className="hidden md:block">
-                <Image src="/Buildtest.png" alt="" width={500} height={500} />
-              </div>
-            </div>
-          </div>
-        </div>
+    <div className="bg-neutral-950">
+      <div className="grid h-[80vh] md:h-[95vh] w-full grid-cols-[repeat(auto-fit,minmax(75px,1fr))] grid-rows-[repeat(auto-fit,minmax(75px,1fr))]">
+        {squares.map((rowIndex) => (
+          <React.Fragment key={rowIndex}>
+            {squares.map((colIndex) => (
+              <motion.div
+                key={`${rowIndex}-${colIndex}`}
+                className="h-full w-full border-[1px] border-neutral-900"
+                style={{ background: "rgba(129, 140, 248, 0)" }}
+                whileHover={{ backgroundColor: "#3370FF", opacity: 0.5 }}
+                whileTap={{ backgroundColor: "#3370FF", opacity: 0.5 }}
+              />
+            ))}
+          </React.Fragment>
+        ))}
       </div>
+      <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center p-8">
+        <h1 className="text-center text-xl font-black uppercase text-white sm:text-8xl md:text-4xl">
+          Inteligente, <span className="text-[#3370FF]">Simples</span>, Flexível
+        </h1>
+        <h1 className="text-center text-5xl font-black uppercase text-white sm:text-8xl md:text-9xl">
+          Para pessoas ambiciosas
+        </h1>
+        <p className="mb-6 mt-4 max-w-3xl text-center text-lg font-light text-neutral-500 md:text-xl">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
+          quisquam nemo excepturi officia necessitatibus veritatis enim ipsam!
+          Laudantium, reiciendis officia!
+        </p>
 
-      <TabsProducts />
+        <button className="pointer-events-auto bg-[#3370FF] px-4 py-2 text-base font-bold uppercase text-white  rounded-md  transition-all shadow-[-3px_-3px_0px_white] hover:shadow-none hover:translate-x-[-3px] hover:translate-y-[-3px]">
+          Fale conosco
+        </button>
+      </div>
     </div>
-  );
+  )
 }
