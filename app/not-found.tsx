@@ -59,7 +59,7 @@ const ExampleContent = () => {
   useEffect(() => {
     const index = Math.floor(Math.random() * frases404.length)
     setRandomIndex(index)
-  }, []) // Executa apenas uma vez, quando o componente é montado
+  }, [frases404.length]) // Executa apenas uma vez, quando o componente é montado
 
   return (
     <div className="relative grid h-screen place-content-center space-y-6 bg-neutral-950 p-8">
