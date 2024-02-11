@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/image"
 export function Cards() {
   return (
     <div className="flex justify-center w-full">
@@ -88,5 +88,5 @@ export function Cards() {
         </div>
       </div>
     </div>
-  );
+  )
 }

@@ -1,32 +1,43 @@
 import { CustomTabs } from "../customTabs"
+import { SwipeCarousel } from "../swipeCarousel"
 
 export function TabsProducts() {
   const tabs = [
     {
       text: "Chatbot",
-      imageUrl: "/chat-bot.svg",
-      icon: "/chat-bot.svg",
+      imageUrl: "/example.png",
+      icon: "/chatbot.svg",
+      iconActive: "/chatbotActive.svg",
     },
     {
       text: "Landing Page",
-      imageUrl: "/path/to/image2.jpg",
-      icon: "/browser.svg",
+      imageUrl: "/Landingpage.webp",
+      icon: "/landingPage.svg",
+      iconActive: "/landingPageActive.svg",
     },
-    { text: "CRM", imageUrl: "/path/to/image2.jpg", icon: "/chat-bot.svg" },
+    {
+      text: "CRM",
+      imageUrl: "/crm.jpg",
+      icon: "/crm.svg",
+      iconActive: "/crmActive.svg",
+    },
     {
       text: "Softwares",
-      imageUrl: "/path/to/image2.jpg",
-      icon: "/chat-bot.svg",
+      imageUrl: "/software.webp",
+      icon: "/software.svg",
+      iconActive: "/softwareActive.svg",
     },
     {
       text: "Trafego Pago",
-      imageUrl: "/path/to/image2.jpg",
-      icon: "/chat-bot.svg",
+      imageUrl: "/trafegopago.png",
+      icon: "/trafegoPago.svg",
+      iconActive: "/trafegoPagoActive.svg",
     },
     {
       text: "Dashboard",
-      imageUrl: "/path/to/image2.jpg",
-      icon: "/chat-bot.svg",
+      imageUrl: "/dashboard.png",
+      icon: "/dashboard.svg",
+      iconActive: "/dashboardActive.svg",
     },
   ]
 
@@ -37,8 +48,8 @@ export function TabsProducts() {
         <p>Veja os produtos que atendem a sua necessidade.</p>
       </div>
 
-      <div className="mt-8">
-        <CustomTabs tabs={tabs} />
+      <div>
+        <SwipeCarousel tabsValue={tabs} />
       </div>
     </div>
   )
