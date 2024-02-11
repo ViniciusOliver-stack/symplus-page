@@ -1,4 +1,3 @@
-import { CustomTabs } from "../customTabs"
 import { SwipeCarousel } from "../swipeCarousel"
 
 export function TabsProducts() {
