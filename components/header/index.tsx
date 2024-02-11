@@ -1,12 +1,32 @@
 import { motion } from "framer-motion"
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 
 export function Header() {
-  const numSquares = Math.floor(window.innerWidth / 75)
+  const [numSquares, setNumSquares] = useState<number>(0)
+  const [squares, setSquares] = useState<number[]>([])
 
-  const squares = Array.from({ length: numSquares }, (_, i) => i)
+  useEffect(() => {
+    const calculateSquares = () => {
+      const numSquares = Math.floor(window.innerWidth / 75)
+      const squares = Array.from({ length: numSquares }, (_, i) => i)
+      setNumSquares(numSquares)
+      setSquares(squares)
+    }
 
-  const [hoveredIndex, setHoveredIndex] = useState(null)
+    calculateSquares()
+
+    const handleResize = () => {
+      calculateSquares()
+    }
+
+    window.addEventListener("resize", handleResize)
+
+    return () => {
+      window.removeEventListener("resize", handleResize)
+    }
+  }, [])
+
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
 
   return (
     <div className="bg-neutral-950">
