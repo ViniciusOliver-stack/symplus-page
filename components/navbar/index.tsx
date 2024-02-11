@@ -1,4 +1,4 @@
-"use client";
+"use client"
 
 import {
   NavigationMenu,
@@ -6,11 +6,11 @@ import {
   NavigationMenuItem,
   NavigationMenuList,
   NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
-import Link from "next/link";
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { HiMenuAlt3, HiOutlineX } from "react-icons/hi";
+} from "@/components/ui/navigation-menu"
+import Link from "next/link"
+import { useState } from "react"
+import { motion, AnimatePresence } from "framer-motion"
+import { HiMenuAlt3, HiOutlineX } from "react-icons/hi"
 
 const products = [
   {
@@ -48,12 +48,12 @@ const products = [
     description:
       "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
   },
-];
+]
 
 export function Navbar() {
-  const [isMenuVisible, setMenuVisible] = useState(false);
+  const [isMenuVisible, setMenuVisible] = useState(false)
 
-  const toggleMenu = () => setMenuVisible(!isMenuVisible);
+  const toggleMenu = () => setMenuVisible(!isMenuVisible)
 
   return (
     <div className="flex items-center justify-between px-8 py-4">
@@ -61,7 +61,7 @@ export function Navbar() {
         <h1 className="text-2xl font-semibold">Logo</h1>
 
         <div className="hidden md:flex">
-          <NavigationMenu>
+          <NavigationMenu className="">
             <NavigationMenuList className="flex items-center m-0 p-0 gap-6">
               <NavigationMenuItem>
                 <Link href="/" className="text-sm font-normal p-2">
@@ -70,7 +70,7 @@ export function Navbar() {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="text-sm font-normal m-0 p-2 gap-0">
+                <NavigationMenuTrigger className="text-sm font-normal m-0 p-2 gap-0 bg-neutral-900">
                   Produtos
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
@@ -80,21 +80,21 @@ export function Navbar() {
                         <Link
                           key={product.title}
                           href={product.href}
-                          className="flex flex-col gap-2 hover:bg-slate-300 p-2 rounded-md"
+                          className="flex flex-col gap-2 hover:bg-neutral-300 p-2 rounded-md"
                         >
                           <h1 className="font-semibold">{product.title}</h1>
                           <p className="line-clamp-2 text-xs">
                             {product.description}
                           </p>
                         </Link>
-                      );
+                      )
                     })}
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="text-sm font-normal m-0 p-2 gap-0">
+                <NavigationMenuTrigger className="text-sm font-normal m-0 p-2 gap-0 bg-neutral-900">
                   Serviços
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
@@ -111,7 +111,7 @@ export function Navbar() {
                             {product.description}
                           </p>
                         </Link>
-                      );
+                      )
                     })}
                   </ul>
                 </NavigationMenuContent>
@@ -134,7 +134,18 @@ export function Navbar() {
 
         <Link
           href="/contact"
-          className="hidden md:block bg-[#3370FF] text-white px-4 py-2 rounded-md text-sm"
+          className='relative z-0 flex items-center gap-2 overflow-hidden whitespace-nowrap rounded-lg border-[1px] 
+          border-neutral-700 px-4 py-1.5 font-medium
+         text-neutral-300 transition-all duration-300
+          before:absolute before:inset-0
+          before:-z-10 before:translate-y-[200%]
+          before:scale-[2.5]
+          before:rounded-[100%] before:bg-neutral-50
+          before:transition-transform before:duration-1000
+          before:content-[""]
+          hover:scale-105 hover:border-neutral-50 hover:text-neutral-900
+          hover:before:translate-y-[0%]
+          active:scale-100'
         >
           Fale Conosco
         </Link>
@@ -160,24 +171,24 @@ export function Navbar() {
                 damping: 40,
                 delay: 0.5,
               }}
-              className="fixed top-0 left-0 w-full h-full bg-white z-50"
+              className="fixed top-0 left-0 w-full h-full bg-neutral-900 z-50"
             >
               <button
-                className="absolute z-50 top-4 right-4 text-black text-2xl"
+                className="absolute z-50 top-6 right-6 text-white text-2xl"
                 onClick={toggleMenu}
               >
                 <HiOutlineX />
               </button>
               <NavigationMenu>
-                <NavigationMenuList className="fixed top-0  w-full h-full flex flex-col items-center justify-center gap-6 ">
+                <NavigationMenuList className="fixed top-0 flex flex-col items-center justify-center w-full h-[100%] gap-8">
                   <NavigationMenuItem>
-                    <Link href="/" className="text-xl font-normal">
+                    <Link href="/" className="text-2xl font-normal">
                       Home
                     </Link>
                   </NavigationMenuItem>
 
                   <NavigationMenuItem>
-                    <NavigationMenuTrigger className="text-xl font-normal m-0 p-0 gap-0">
+                    <NavigationMenuTrigger className="text-2xl font-normal m-0 p-0 gap-0 bg-neutral-900">
                       Produtos
                     </NavigationMenuTrigger>
                     <NavigationMenuContent>
@@ -194,14 +205,14 @@ export function Navbar() {
                                 {product.description}
                               </p>
                             </Link>
-                          );
+                          )
                         })}
                       </ul>
                     </NavigationMenuContent>
                   </NavigationMenuItem>
 
                   <NavigationMenuItem>
-                    <NavigationMenuTrigger className="text-xl font-normal m-0 p-0 gap-0">
+                    <NavigationMenuTrigger className="text-2xl font-normal m-0 p-0 gap- bg-neutral-9000">
                       Serviços
                     </NavigationMenuTrigger>
                     <NavigationMenuContent>
@@ -218,32 +229,31 @@ export function Navbar() {
                                 {product.description}
                               </p>
                             </Link>
-                          );
+                          )
                         })}
                       </ul>
                     </NavigationMenuContent>
                   </NavigationMenuItem>
 
                   <NavigationMenuItem>
-                    <Link href="/" className="text-xl font-normal">
+                    <Link href="/" className="text-2xl font-normal">
                       Sobre nós
                     </Link>
                   </NavigationMenuItem>
 
                   <NavigationMenuItem>
-                    <Link href="/" className="text-xl font-normal">
+                    <Link href="/" className="text-2xl font-normal">
                       Contato
                     </Link>
                   </NavigationMenuItem>
 
-                  <NavigationMenuItem>
-                    <Link
-                      href="/contact"
-                      className="bg-[#3370FF] text-white px-4 py-2 rounded-md text-lg mt-8"
-                    >
-                      Fale Conosco
-                    </Link>
-                  </NavigationMenuItem>
+                  <div className="absolute bottom-8">
+                    <ul className="flex items-center gap-3">
+                      <li>Instagram</li>
+                      <li>Linkedin</li>
+                      <li>Youtube</li>
+                    </ul>
+                  </div>
                 </NavigationMenuList>
               </NavigationMenu>
             </motion.div>
@@ -251,5 +261,5 @@ export function Navbar() {
         </AnimatePresence>
       </div>
     </div>
-  );
+  )
 }
