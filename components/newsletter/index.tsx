@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/image"
 
 export function Newsletter() {
   return (
@@ -13,11 +13,11 @@ export function Newsletter() {
           height={30}
         />
         <p className="text-base w-1/2 pt-28">
-          "Não perca as últimas novidades em tecnologia e notícias exclusivas da
+          Não perca as últimas novidades em tecnologia e notícias exclusivas da
           nossa empresa! Assine nossa newsletter agora e mantenha-se à frente do
           jogo. Seja o primeiro a receber insights, atualizações e ofertas
           especiais diretamente na sua caixa de entrada. Junte-se à nossa
-          comunidade de entusiastas de tecnologia hoje mesmo!"
+          comunidade de entusiastas de tecnologia hoje mesmo!
         </p>
       </div>
       <div className="place-content-end">
@@ -38,5 +38,5 @@ export function Newsletter() {
         className="-z-50 absolute"
       />
     </div>
-  );
+  )
 }
