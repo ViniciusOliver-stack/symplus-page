@@ -76,17 +76,14 @@
 }
 
 ::-webkit-scrollbar {
-  height: 8px; /* Altura da barra de rolagem */
+  width: 0px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1; /* Cor do fundo da área de rolagem */
+  background-color: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #888; /* Cor da barra de rolagem */
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #555; /* Cor da barra de rolagem ao passar o mouse */
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 5px;
 }
