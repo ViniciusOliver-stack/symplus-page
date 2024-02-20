@@ -26,7 +26,6 @@ export function TabsProducts() {
 
       <div>
         <ScrollEffect />
-
       </div>
     </div>
   )
