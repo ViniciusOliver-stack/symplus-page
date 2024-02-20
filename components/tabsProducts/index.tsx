@@ -1,44 +1,21 @@
-import { SwipeCarousel } from "../swipeCarousel"
+import ScrollEffect from "../scrollProducts";
 
 export function TabsProducts() {
-  const tabs = [
+
+  const content = [
     {
-      text: "Chatbot",
-      imageUrl: "/example.png",
-      icon: "/chatbot.svg",
-      iconActive: "/chatbotActive.svg",
+      title: "Título 1",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. In, id voluptatum cum illum quod asperiores, quaerat porro vel eaque, inventore accusamus veritatis? Magni exercitationem aspernatur quas quam. Sunt, obcaecati? Nisi!",
+
     },
     {
-      text: "Landing Page",
-      imageUrl: "/Landingpage.webp",
-      icon: "/landingPage.svg",
-      iconActive: "/landingPageActive.svg",
+      title: "Título 2",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. In, id voluptatum cum illum quod asperiores, quaerat porro vel eaque, inventore accusamus veritatis? Magni exercitationem aspernatur quas quam. Sunt, obcaecati? Nisi!",
     },
-    {
-      text: "CRM",
-      imageUrl: "/crm.jpg",
-      icon: "/crm.svg",
-      iconActive: "/crmActive.svg",
-    },
-    {
-      text: "Softwares",
-      imageUrl: "/software.webp",
-      icon: "/software.svg",
-      iconActive: "/softwareActive.svg",
-    },
-    {
-      text: "Trafego Pago",
-      imageUrl: "/trafegopago.png",
-      icon: "/trafegoPago.svg",
-      iconActive: "/trafegoPagoActive.svg",
-    },
-    {
-      text: "Dashboard",
-      imageUrl: "/dashboard.png",
-      icon: "/dashboard.svg",
-      iconActive: "/dashboardActive.svg",
-    },
-  ]
+    // Adicione mais itens conforme necessário
+  ];
+
+
 
   return (
     <div className="w-[85%] m-auto mt-6 md:mt-32">
@@ -48,7 +25,8 @@ export function TabsProducts() {
       </div>
 
       <div>
-        <SwipeCarousel tabsValue={tabs} />
+        <ScrollEffect />
+
       </div>
     </div>
   )
