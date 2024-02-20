@@ -83,14 +83,14 @@ const ScrollItem = ({
   };
 
   return (
-    <div className="flex items-center justify-center">
+    <div className="flex flex-col md:flex-row items-center justify-center">
       <motion.div
         ref={ref}
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
         variants={variants}
         transition={{ duration: 1 }}
-        className={`w-1/2 ${
+        className={`w-full md:w-1/2 ${
           imageStartPosition === "left" ? "order-1" : "order-2"
         }`}
       >
@@ -101,15 +101,17 @@ const ScrollItem = ({
         animate={inView ? "visible" : "hidden"}
         variants={variants}
         transition={{ duration: 1, delay: 0.5 }}
-        className={`w-1/2 flex flex-col gap-4 ${
+        className={`w-full md:w-1/2 md:flex flex-col gap-4 ${
           textStartPosition === "left" ? "order-1" : "order-2"
         }`}
       >
-        <h2 className="text-3xl mb-10 font-semibold">{text}</h2>
+        <h2 className="text-3xl mb-4 font-semibold">{text}</h2>
         <p>{description}</p>
-        <Link href={buttonLink} className="text-blue-500">
-          {buttonText}
-        </Link>
+        <div className="mt-4">
+          <Link href={buttonLink} className="text-blue-500">
+            {buttonText}
+          </Link>
+        </div>
       </motion.div>
     </div>
   );
