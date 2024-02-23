@@ -1,19 +1,18 @@
-import React from "react";
-import Link from "next/link";
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import Image from "next/image";
-
+import React from "react"
+import Link from "next/link"
+import { motion } from "framer-motion"
+import { useInView } from "react-intersection-observer"
+import Image from "next/image"
 
 interface Item {
-  id: number;
-  image: string;
-  text: string;
-  description: string;
-  imageStartPosition: string;
-  textStartPosition: string;
-  buttonText: string;
-  buttonLink: string;
+  id: number
+  image: string
+  text: string
+  description: string
+  imageStartPosition: string
+  textStartPosition: string
+  buttonText: string
+  buttonLink: string
 }
 
 const items = [
@@ -31,7 +30,8 @@ const items = [
   },
   {
     id: 2,
-    image: "https://cdn.hashnode.com/res/hashnode/image/upload/v1645205958185/sdsAgMv12.png",
+    image:
+      "https://cdn.hashnode.com/res/hashnode/image/upload/v1645205958185/sdsAgMv12.png",
     text: "Texto 2",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam optio quo, sapiente officia ipsum aperiam quas corporis provident qui sint dicta dolor, expedita voluptatum tenetur aut, distinctio assumenda modi molestiae!",
@@ -41,11 +41,11 @@ const items = [
     buttonLink: "/texto-2",
   },
   // Adicione mais itens conforme necessário
-];
+]
 
 const ScrollEffect = () => {
   return (
-    <div>
+    <div className="my-20">
       {items.map((item) => (
         <div key={item.id}>
           <ScrollItem
@@ -58,12 +58,11 @@ const ScrollEffect = () => {
             buttonText={item.buttonText}
             buttonLink={item.buttonLink}
           />
-          <hr className="my-8" />
         </div>
       ))}
     </div>
-  );
-};
+  )
+}
 
 const ScrollItem = ({
   id,
@@ -75,12 +74,12 @@ const ScrollItem = ({
   buttonText,
   buttonLink,
 }: Item) => {
-  const { ref, inView } = useInView({ triggerOnce: true });
+  const { ref, inView } = useInView({ triggerOnce: true })
 
   const variants = {
     visible: { opacity: 1, x: 0 },
     hidden: { opacity: 0, x: id === 1 ? -100 : 100 },
-  };
+  }
 
   return (
     <div className="flex flex-col md:flex-row items-center justify-center">
@@ -94,7 +93,13 @@ const ScrollItem = ({
           imageStartPosition === "left" ? "order-1" : "order-2"
         }`}
       >
-        <Image src={image} className="w-full h-auto rounded" alt="Imagem Apresentação dos projetos" width={1000} height={1000}/>
+        <Image
+          src={image}
+          className="w-full h-auto rounded"
+          alt="Imagem Apresentação dos projetos"
+          width={1000}
+          height={1000}
+        />
       </motion.div>
       <motion.div
         initial="hidden"
@@ -114,7 +119,7 @@ const ScrollItem = ({
         </div>
       </motion.div>
     </div>
-  );
-};
+  )
+}
 
-export default ScrollEffect;
+export default ScrollEffect
