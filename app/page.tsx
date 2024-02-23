@@ -3,7 +3,8 @@
 import { BackToTopButton } from "@/components/backToTopButton"
 import { Cards } from "@/components/cards"
 import { Header } from "@/components/header"
-import { Navbar } from "@/components/navbar"
+import { InfiniteMovingCardsDemo } from "@/components/infiniteMovingCardsDemo"
+
 import { Newsletter } from "@/components/newsletter"
 import { TabsProducts } from "@/components/tabsProducts"
 
@@ -14,6 +15,7 @@ export default function Home() {
       <TabsProducts />
       <BackToTopButton />
       <Cards />
+      <InfiniteMovingCardsDemo />
       <Newsletter />
     </div>
   )
