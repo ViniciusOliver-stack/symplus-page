@@ -2,15 +2,25 @@
 
 import React, { useEffect, useState } from "react"
 import { InfiniteMovingCards } from "../InfiniteSlider"
+import { TitleInformation } from "../titleInformation"
 
 export function InfiniteMovingCardsDemo() {
   return (
-    <div className="h-[40rem] rounded-md flex flex-col antialiased items-center justify-center relative overflow-hidden">
-      <InfiniteMovingCards
-        items={testimonials}
-        direction="right"
-        speed="slow"
-      />
+    <div>
+      <div className="text-center">
+        <TitleInformation
+          title="Depoimento dos clientes"
+          description="Veja o que os clientes falam sobre nós."
+        />
+      </div>
+
+      <div className=" rounded-md flex flex-col antialiased items-center justify-center relative overflow-hidden">
+        <InfiniteMovingCards
+          items={testimonials}
+          direction="right"
+          speed="slow"
+        />
+      </div>
     </div>
   )
 }
