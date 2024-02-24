@@ -106,7 +106,7 @@ const ScrollItem = ({
         animate={inView ? "visible" : "hidden"}
         variants={variants}
         transition={{ duration: 1, delay: 0.5 }}
-        className={`w-full md:w-1/2 md:flex flex-col gap-4 ${
+        className={`w-full md:w-1/2 md:flex flex-col gap-4 mb-8 ${
           textStartPosition === "left" ? "order-1" : "order-2"
         }`}
       >
