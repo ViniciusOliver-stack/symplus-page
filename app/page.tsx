@@ -10,13 +10,13 @@ import { TabsProducts } from "@/components/tabsProducts"
 
 export default function Home() {
   return (
-    <div className="overflow-x-hidden">
+    <div className="overflow-x-hidden flex flex-col gap-[120px]">
       <Header />
       <TabsProducts />
       <BackToTopButton />
       <Cards />
       <InfiniteMovingCardsDemo />
-      <Newsletter />
+      {/* <Newsletter /> */}
     </div>
   )
 }
