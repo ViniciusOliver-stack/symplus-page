@@ -33,11 +33,11 @@ export function BackToTopButton() {
 
   return (
     <motion.button
-      className='fixed bottom-10 right-10 w-12 h-12 px-4 shadow-md z-0 flex items-center gap-2 overflow-hidden whitespace-nowrap rounded-full border-[1px] 
+      className='fixed bottom-10 right-10 w-12 h-12 px-4 shadow-md z-50 flex items-center gap-2 overflow-hidden whitespace-nowrap rounded-full border-[1px] 
       border-neutral-700 py-1.5 font-medium bg-[#3370FF] md:bg-transparent
      text-neutral-300 transition-all duration-300
       before:absolute before:inset-0
-      before:-z-10 before:translate-y-[200%]
+      before:-z-50 before:translate-y-[200%]
       before:scale-[2.5]
       before:rounded-[100%] before:bg-white md:before:bg-neutral-50
       before:transition-transform before:duration-1000
