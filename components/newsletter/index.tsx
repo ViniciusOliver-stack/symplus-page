@@ -1,4 +1,4 @@
-import Image from "next/image"
+import Image from "next/image";
 
 export function Newsletter() {
   return (
@@ -22,11 +22,11 @@ export function Newsletter() {
       </div>
       <div className="place-content-end">
         <input
-          className="text-black p-1 pl-4 rounded-xl bg-white mt-60 px-72 py-6 placeholder-blue-600 placeholder-opacity-85 placeholder:text-xl placeholder:font-bold placeholder:pl-2"
-          type="text"
+          className="h-20 w-[36rem] text-black text-xl font-medium p-1 pl-6 rounded-xl bg-white mt-60 placeholder-blue-600 placeholder-opacity-85 placeholder:text-xl placeholder:font-medium outline-none"
+          type="email"
           placeholder="Seu e-mail aqui"
         />
-        <button className=" bg-slate-400 px-12 py-3 mt-6 ml-[17.8rem] opacity-90 rounded-xl font-bold text-white text-lg">
+        <button className=" bg-slate-400 px-12 py-3 mt-6 ml-[21rem] opacity-90 rounded-xl font-medium text-white text-lg">
           ASSINE AGORA!
         </button>
       </div>
@@ -38,5 +38,5 @@ export function Newsletter() {
         className="-z-50 absolute"
       />
     </div>
-  )
+  );
 }
