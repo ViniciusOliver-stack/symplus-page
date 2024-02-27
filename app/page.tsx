@@ -10,7 +10,7 @@ import { Formulary } from "@/components/formulary";
 
 export default function Home() {
   return (
-    <div className="overflow-x-hidden">
+    <div className="overflow-x-hidden flex flex-col gap-[120px]">
       <Header />
       <TabsProducts />
       <BackToTopButton />

@@ -1,54 +1,30 @@
-import { SwipeCarousel } from "../swipeCarousel"
+import ScrollEffect from "../scrollProducts"
+import { TitleInformation } from "../titleInformation"
 
 export function TabsProducts() {
-  const tabs = [
+  const content = [
     {
-      text: "Chatbot",
-      imageUrl: "/example.png",
-      icon: "/chatbot.svg",
-      iconActive: "/chatbotActive.svg",
+      title: "Título 1",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. In, id voluptatum cum illum quod asperiores, quaerat porro vel eaque, inventore accusamus veritatis? Magni exercitationem aspernatur quas quam. Sunt, obcaecati? Nisi!",
     },
     {
-      text: "Landing Page",
-      imageUrl: "/Landingpage.webp",
-      icon: "/landingPage.svg",
-      iconActive: "/landingPageActive.svg",
+      title: "Título 2",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. In, id voluptatum cum illum quod asperiores, quaerat porro vel eaque, inventore accusamus veritatis? Magni exercitationem aspernatur quas quam. Sunt, obcaecati? Nisi!",
     },
-    {
-      text: "CRM",
-      imageUrl: "/crm.jpg",
-      icon: "/crm.svg",
-      iconActive: "/crmActive.svg",
-    },
-    {
-      text: "Softwares",
-      imageUrl: "/software.webp",
-      icon: "/software.svg",
-      iconActive: "/softwareActive.svg",
-    },
-    {
-      text: "Trafego Pago",
-      imageUrl: "/trafegopago.png",
-      icon: "/trafegoPago.svg",
-      iconActive: "/trafegoPagoActive.svg",
-    },
-    {
-      text: "Dashboard",
-      imageUrl: "/dashboard.png",
-      icon: "/dashboard.svg",
-      iconActive: "/dashboardActive.svg",
-    },
+    // Adicione mais itens conforme necessário
   ]
 
   return (
-    <div className="w-[85%] m-auto mt-6 md:mt-32">
-      <div className="w-[85%] m-auto text-center flex flex-col gap-4">
-        <h2 className="text-4xl md:text-[40px]">Veja nossos produtos</h2>
-        <p>Veja os produtos que atendem a sua necessidade.</p>
-      </div>
+    <div className="w-[85%] m-auto">
+      <TitleInformation
+        title="Veja nosso produtos"
+        description="Conheça alguns de nossos produto que facilitam e atendem a sua necessidade e da sua empresa."
+      />
 
       <div>
-        <SwipeCarousel tabsValue={tabs} />
+        <ScrollEffect />
       </div>
     </div>
   )

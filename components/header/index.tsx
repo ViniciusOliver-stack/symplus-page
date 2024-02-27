@@ -29,7 +29,7 @@ export function Header() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
 
   return (
-    <div className="bg-neutral-950">
+    <div className="bg-neutral-950/20">
       <div className="grid h-[80vh] md:h-[95vh] w-full grid-cols-[repeat(auto-fit,minmax(75px,1fr))] grid-rows-[repeat(auto-fit,minmax(75px,1fr))]">
         {squares.map((rowIndex) => (
           <React.Fragment key={rowIndex}>
