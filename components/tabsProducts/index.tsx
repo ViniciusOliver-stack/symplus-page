@@ -17,7 +17,7 @@ export function TabsProducts() {
   ]
 
   return (
-    <div className="w-[85%] m-auto">
+    <div className="w-[85%] m-auto scroll-section" id="products">
       <TitleInformation
         title="Veja nosso produtos"
         description="Conheça alguns de nossos produto que facilitam e atendem a sua necessidade e da sua empresa."

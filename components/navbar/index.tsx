@@ -8,9 +8,10 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu"
 import Link from "next/link"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { HiMenuAlt3, HiOutlineX } from "react-icons/hi"
+import { TbBrandInstagram, TbBrandLinkedin } from "react-icons/tb"
 
 const products = [
   {
@@ -53,7 +54,28 @@ const products = [
 export function Navbar() {
   const [isMenuVisible, setMenuVisible] = useState(false)
 
-  const toggleMenu = () => setMenuVisible(!isMenuVisible)
+  const toggleMenu = () => {
+    // Adicione ou remova a classe ao body para desabilitar o scroll
+    if (!isMenuVisible) {
+      document.body.classList.add("overflow-hidden")
+    } else {
+      document.body.classList.remove("overflow-hidden")
+    }
+
+    setMenuVisible(!isMenuVisible)
+  }
+
+  const closeMenu = () => {
+    document.body.classList.remove("overflow-hidden")
+    setMenuVisible(false)
+  }
+
+  useEffect(() => {
+    // Remover a classe quando o componente for desmontado ou o menu for fechado
+    return () => {
+      document.body.classList.remove("overflow-hidden")
+    }
+  }, [])
 
   return (
     <div className="flex items-center justify-between px-8 py-4">
@@ -69,6 +91,20 @@ export function Navbar() {
                 </Link>
               </NavigationMenuItem>
 
+              <NavigationMenuItem>
+                <Link href="#products" className="text-sm font-normal p-2">
+                  Produtos
+                </Link>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <Link href="#services" className="text-sm font-normal p-2">
+                  Serviços
+                </Link>
+              </NavigationMenuItem>
+
+              {/* 
+              Mega Menu
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="text-sm font-normal m-0 p-2 gap-0 bg-neutral-900">
                   Produtos
@@ -115,16 +151,16 @@ export function Navbar() {
                     })}
                   </ul>
                 </NavigationMenuContent>
-              </NavigationMenuItem>
+              </NavigationMenuItem> */}
 
               <NavigationMenuItem>
-                <Link href="/" className="text-sm font-normal p-2">
+                <Link href="#aboutus" className="text-sm font-normal p-2">
                   Sobre nós
                 </Link>
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <Link href="/" className="text-sm font-normal p-2">
+                <Link href="#contact" className="text-sm font-normal p-2">
                   Contato
                 </Link>
               </NavigationMenuItem>
@@ -133,7 +169,7 @@ export function Navbar() {
         </div>
 
         <Link
-          href="/contact"
+          href="#contact"
           className='relative z-0 flex items-center gap-2 overflow-hidden whitespace-nowrap rounded-lg border-[1px] 
           border-neutral-700 px-4 py-1.5 font-medium
          text-neutral-300 transition-all duration-300
@@ -146,6 +182,11 @@ export function Navbar() {
           hover:scale-105 hover:border-neutral-50 hover:text-neutral-900
           hover:before:translate-y-[0%]
           active:scale-100'
+          onClick={(e) => {
+            e.preventDefault()
+            const produtosSection = document.getElementById("contact")
+            produtosSection!.scrollIntoView({ behavior: "smooth" })
+          }}
         >
           Fale Conosco
         </Link>
@@ -182,11 +223,37 @@ export function Navbar() {
               <NavigationMenu>
                 <NavigationMenuList className="fixed top-0 flex flex-col items-center justify-center w-full h-[100%] gap-8">
                   <NavigationMenuItem>
-                    <Link href="/" className="text-2xl font-normal">
+                    <Link
+                      href="/"
+                      className="text-lg font-normal p-2"
+                      onClick={closeMenu}
+                    >
                       Home
                     </Link>
                   </NavigationMenuItem>
 
+                  <NavigationMenuItem>
+                    <Link
+                      href="#products"
+                      className="text-lg font-normal p-2"
+                      onClick={closeMenu}
+                    >
+                      Produtos
+                    </Link>
+                  </NavigationMenuItem>
+
+                  <NavigationMenuItem>
+                    <Link
+                      href="#services"
+                      className="text-lg font-normal p-2"
+                      onClick={closeMenu}
+                    >
+                      Serviços
+                    </Link>
+                  </NavigationMenuItem>
+
+                  {/* 
+                  Mega Menu
                   <NavigationMenuItem>
                     <NavigationMenuTrigger className="text-2xl font-normal m-0 p-0 gap-0 bg-neutral-900">
                       Produtos
@@ -233,25 +300,43 @@ export function Navbar() {
                         })}
                       </ul>
                     </NavigationMenuContent>
-                  </NavigationMenuItem>
+                  </NavigationMenuItem> */}
 
                   <NavigationMenuItem>
-                    <Link href="/" className="text-2xl font-normal">
+                    <Link
+                      href="#aboutus"
+                      className="text-lg font-normal p-2"
+                      onClick={closeMenu}
+                    >
                       Sobre nós
                     </Link>
                   </NavigationMenuItem>
 
                   <NavigationMenuItem>
-                    <Link href="/" className="text-2xl font-normal">
+                    <Link
+                      href="#contact"
+                      className="text-lg font-normal p-2"
+                      onClick={closeMenu}
+                    >
                       Contato
                     </Link>
                   </NavigationMenuItem>
 
                   <div className="absolute bottom-8">
-                    <ul className="flex items-center gap-3">
-                      <li>Instagram</li>
-                      <li>Linkedin</li>
-                      <li>Youtube</li>
+                    <ul className="mt-8 flex justify-center gap-6 sm:justify-start md:gap-8">
+                      <li>
+                        <Link href="#" className="flex items-center gap-3">
+                          <TbBrandInstagram size={22} />
+                          Instagram
+                        </Link>
+                      </li>
+
+                      <li>
+                        <Link href="#" className="flex items-center gap-3">
+                          <TbBrandLinkedin size={22} />
+                          Linkedin
+                        </Link>
+                      </li>
                     </ul>
                   </div>
                 </NavigationMenuList>

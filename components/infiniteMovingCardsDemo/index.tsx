@@ -7,7 +7,7 @@ import { TitleInformation } from "../titleInformation"
 export function InfiniteMovingCardsDemo() {
   return (
     <div>
-      <div className="text-center">
+      <div className="text-center scroll-section" id="aboutus">
         <TitleInformation
           title="Depoimento dos clientes"
           description="Veja o que os clientes falam sobre nós."

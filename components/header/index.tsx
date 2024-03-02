@@ -1,4 +1,5 @@
 import { motion } from "framer-motion"
+import Link from "next/link"
 import React, { useState, useEffect } from "react"
 
 export function Header() {
@@ -29,7 +30,7 @@ export function Header() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
 
   return (
-    <div className="bg-neutral-950/20">
+    <div className="bg-neutral-950/20 scroll-section" id="home">
       <div className="grid h-[80vh] md:h-[95vh] w-full grid-cols-[repeat(auto-fit,minmax(75px,1fr))] grid-rows-[repeat(auto-fit,minmax(75px,1fr))]">
         {squares.map((rowIndex) => (
           <React.Fragment key={rowIndex}>
@@ -58,9 +59,11 @@ export function Header() {
           Laudantium, reiciendis officia!
         </p>
 
-        <button className="pointer-events-auto bg-[#3370FF] px-4 py-2 text-base font-bold uppercase text-white  rounded-md  transition-all shadow-[-3px_-3px_0px_white] hover:shadow-none hover:translate-x-[-3px] hover:translate-y-[-3px]">
-          Fale conosco
-        </button>
+        <Link href="#contact">
+          <button className="pointer-events-auto bg-[#3370FF] px-4 py-2 text-base font-bold uppercase text-white  rounded-md  transition-all shadow-[-3px_-3px_0px_white] hover:shadow-none hover:translate-x-[-3px] hover:translate-y-[-3px]">
+            Fale conosco
+          </button>
+        </Link>
       </div>
     </div>
   )

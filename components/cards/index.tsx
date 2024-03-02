@@ -32,7 +32,10 @@ const mockCardInfo = [
 
 export function Cards() {
   return (
-    <div className="w-[85%] m-auto flex flex-col md:flex-row items-center justify-center gap-8">
+    <div
+      className="w-[85%] m-auto flex flex-col md:flex-row items-center justify-center gap-8 scroll-section"
+      id="services"
+    >
       <div className="md:w-[450px] flex flex-col justify-center items-center">
         <TitleInformation
           title="Motivos para investir com a Symplus"
