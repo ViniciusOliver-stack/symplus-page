@@ -1,12 +1,13 @@
-"use client";
+"use client"
 
-import { BackToTopButton } from "@/components/backToTopButton";
-import { Cards } from "@/components/cards";
-import { Header } from "@/components/header";
-import { Navbar } from "@/components/navbar";
-import { Newsletter } from "@/components/newsletter";
-import { TabsProducts } from "@/components/tabsProducts";
-import { Formulary } from "@/components/formulary";
+import { BackToTopButton } from "@/components/backToTopButton"
+import { Cards } from "@/components/cards"
+import { Header } from "@/components/header"
+import { Navbar } from "@/components/navbar"
+import { Newsletter } from "@/components/newsletter"
+import { TabsProducts } from "@/components/tabsProducts"
+import { Formulary } from "@/components/formulary"
+import { InfiniteMovingCardsDemo } from "@/components/infiniteMovingCardsDemo"
 
 export default function Home() {
   return (
@@ -15,8 +16,9 @@ export default function Home() {
       <TabsProducts />
       <BackToTopButton />
       <Cards />
+      <InfiniteMovingCardsDemo />
       <Newsletter />
       <Formulary />
     </div>
-  );
+  )
 }
