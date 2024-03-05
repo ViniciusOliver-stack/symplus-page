@@ -3,7 +3,8 @@ import { useState } from "react"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
 import axios from "axios"
-import { Toaster, toast } from "react-hot-toast" // Adicione esta linha
+import { Toaster, toast } from "react-hot-toast"
+import dotenv from "dotenv"
 
 const mockInput = [
   { id: "1", title: "Sites/Landing Pages" },
@@ -43,7 +44,7 @@ export function Formulario() {
 
   async function sendContactForm(data: FormData) {
     const webhookUrl =
-      "https://discord.com/api/webhooks/1213462167702212659/5IaCvRMIeUKQsruolXBWCaYU9MRp3N1uqHX_pYjDZKRhy4Nc0qAz5zV0egazWKdYnQaQ"
+      "https://discord.com/api/webhooks/1214375565570875432/_LPM9dnASAek6-Rbt3YNr-nzEmEI73IJL_LuCOq15xeLYg1TxQQDfhlhhhkrm3RFDJN8"
 
     try {
       await axios.post(webhookUrl, {
