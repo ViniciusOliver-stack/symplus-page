@@ -4,7 +4,6 @@ import { useForm } from "react-hook-form"
 import { z } from "zod"
 import axios from "axios"
 import { Toaster, toast } from "react-hot-toast"
-import dotenv from "dotenv"
 
 const mockInput = [
   { id: "1", title: "Sites/Landing Pages" },
