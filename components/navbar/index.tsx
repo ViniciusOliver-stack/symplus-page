@@ -12,6 +12,8 @@ import { useEffect, useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { HiMenuAlt3, HiOutlineX } from "react-icons/hi"
 import { TbBrandInstagram, TbBrandLinkedin } from "react-icons/tb"
+import LogoSymplus from "/public/Symplus.svg"
+import Image from "next/image"
 
 const products = [
   {
@@ -80,7 +82,10 @@ export function Navbar() {
   return (
     <div className="flex items-center justify-between px-8 py-4">
       <div className="w-full flex justify-around">
-        <h1 className="text-2xl font-semibold">Logo</h1>
+        <h1 className="text-2xl font-semibold flex items-center gap-2">
+          <Image src={LogoSymplus} alt="Logo Symplus" width={30} height={30} />{" "}
+          <span>Symplus</span>
+        </h1>
 
         <div className="hidden md:flex">
           <NavigationMenu className="">

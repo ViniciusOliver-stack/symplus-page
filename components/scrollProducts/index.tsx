@@ -20,9 +20,9 @@ const items = [
     id: 1,
     image:
       "https://cdn.hashnode.com/res/hashnode/image/upload/v1645205958185/sdsAgMv12.png",
-    text: "Landing Page",
+    text: "Página Web",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam optio quo, sapiente officia ipsum aperiam quas corporis provident qui sint dicta dolor, expedita voluptatum tenetur aut, distinctio assumenda modi molestiae!",
+      "Nossas landing pages e sites são projetadas para converter visitantes em clientes. Com designs atraentes e conteúdos autênticos, criamos páginas otimizadas que capturam a atenção do seu público-alvo e os guiam diretamente para a ação desejada. Desde o primeiro clique até a conversão, garantimos uma experiência envolvente e eficaz, aumentando assim as chances de sucesso para o seu negócio online.",
     imageStartPosition: "left",
     textStartPosition: "right",
     buttonText: "Saiba mais",
@@ -32,13 +32,26 @@ const items = [
     id: 2,
     image:
       "https://cdn.hashnode.com/res/hashnode/image/upload/v1645205958185/sdsAgMv12.png",
-    text: "Texto 2",
+    text: "Tráfego Pago",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam optio quo, sapiente officia ipsum aperiam quas corporis provident qui sint dicta dolor, expedita voluptatum tenetur aut, distinctio assumenda modi molestiae!",
+      "Maximize o alcance e a relevância do seu negócio online com nosso serviço de gestão de tráfego. Utilizamos estratégias avançadas de publicidade digital para direcionar um fluxo qualificado de visitantes para o seu site, aumentando assim sua visibilidade e conversões. Desde campanhas segmentadas até otimização contínua, garantimos o melhor retorno sobre o investimento em cada clique.",
     imageStartPosition: "right",
     textStartPosition: "left",
     buttonText: "Saiba mais",
     buttonLink: "/texto-2",
+  },
+
+  {
+    id: 3,
+    image:
+      "https://cdn.hashnode.com/res/hashnode/image/upload/v1645205958185/sdsAgMv12.png",
+    text: "Geração de Leads",
+    description:
+      "Aprimore sua presença online e cultive relacionamentos duradouros com nossa estratégia de geração de leads. Através de conteúdo relevante e estratégias de SEO eficazes, capturamos a atenção do seu público-alvo, nutrimos seu interesse e os convertemos em leads qualificados. Desde blogs informativos até campanhas de email marketing personalizadas, estamos aqui para impulsionar o crescimento sustentável do seu negócio.",
+    imageStartPosition: "left",
+    textStartPosition: "right",
+    buttonText: "Saiba mais",
+    buttonLink: "/landing-page",
   },
   // Adicione mais itens conforme necessário
 ]

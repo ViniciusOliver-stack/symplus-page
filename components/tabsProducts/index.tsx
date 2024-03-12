@@ -4,14 +4,19 @@ import { TitleInformation } from "../titleInformation"
 export function TabsProducts() {
   const content = [
     {
-      title: "Título 1",
+      title: "Página Web",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. In, id voluptatum cum illum quod asperiores, quaerat porro vel eaque, inventore accusamus veritatis? Magni exercitationem aspernatur quas quam. Sunt, obcaecati? Nisi!",
+        "Nossas landing pages e sites são projetadas para converter visitantes em clientes. Com designs atraentes e conteúdos autênticos, criamos páginas otimizadas que capturam a atenção do seu público-alvo e os guiam diretamente para a ação desejada. Desde o primeiro clique até a conversão, garantimos uma experiência envolvente e eficaz, aumentando assim as chances de sucesso para o seu negócio online.",
     },
     {
-      title: "Título 2",
+      title: "Tráfego Pago",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. In, id voluptatum cum illum quod asperiores, quaerat porro vel eaque, inventore accusamus veritatis? Magni exercitationem aspernatur quas quam. Sunt, obcaecati? Nisi!",
+        "Maximize o alcance e a relevância do seu negócio online com nosso serviço de gestão de tráfego. Utilizamos estratégias avançadas de publicidade digital para direcionar um fluxo qualificado de visitantes para o seu site, aumentando assim sua visibilidade e conversões. Desde campanhas segmentadas até otimização contínua, garantimos o melhor retorno sobre o investimento em cada clique.",
+    },
+    {
+      title: "Tráfego Pago",
+      description:
+        "Maximize o alcance e a relevância do seu negócio online com nosso serviço de gestão de tráfego. Utilizamos estratégias avançadas de publicidade digital para direcionar um fluxo qualificado de visitantes para o seu site, aumentando assim sua visibilidade e conversões. Desde campanhas segmentadas até otimização contínua, garantimos o melhor retorno sobre o investimento em cada clique.",
     },
     // Adicione mais itens conforme necessário
   ]

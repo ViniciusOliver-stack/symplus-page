@@ -4,8 +4,11 @@ import {
   TbBrandWhatsapp,
 } from "react-icons/tb"
 
+import LogoSymplus from "/public/Symplus.svg"
+
 import { HiArrowDownRight } from "react-icons/hi2"
 import Link from "next/link"
+import Image from "next/image"
 
 export function Footer() {
   const getYear = new Date().getFullYear()
@@ -16,7 +19,12 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           <div>
             <div className="flex justify-center text-blue-700 sm:justify-start">
-              Logo
+              <Image
+                src={LogoSymplus}
+                alt="Logo Symplus"
+                width={50}
+                height={50}
+              />
             </div>
 
             <p className="mt-6 max-w-md text-center leading-relaxed text-gray-500 sm:max-w-xs sm:text-left">
