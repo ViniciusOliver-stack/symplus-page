@@ -39,7 +39,7 @@ export function Cards() {
       <div className="md:w-[450px] flex flex-col justify-center items-center">
         <TitleInformation
           title="Motivos para investir com a Symplus"
-          description="Investir na Symplus é investir com a certeza de um retorno rápido, escalabilidade nas vendas e suporte de uma equipe técnica altamente qualificada."
+          description="Com a Symplus, seu investimento é mais do que uma escolha: é o caminho para um crescimento exponencial. Desfrute de um retorno rápido, alcance expandido de clientes e aprimoramento contínuo dos serviços. Conte conosco para impulsionar seu sucesso, com suporte técnico excepcional e uma parceria sólida."
         />
 
         <Link
