@@ -28,20 +28,28 @@ export function Footer() {
             </div>
 
             <p className="mt-6 max-w-md text-center leading-relaxed text-gray-500 sm:max-w-xs sm:text-left">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt
-              consequuntur amet culpa cum itaque neque.
+              Potencialize sua Criatividade, Conquiste Clientes e Alcance Novos
+              Patamares de Sucesso. Juntos, Podemos Mais!
             </p>
 
             <ul className="mt-8 flex justify-center gap-6 sm:justify-start md:gap-8">
               <li>
-                <Link href="#" className="flex items-center gap-3">
+                <Link
+                  href="https://www.instagram.com/sym.plus?igsh=MWd0cDdsazJ6YWZlZQ=="
+                  className="flex items-center gap-3"
+                  target="_blank"
+                >
                   <TbBrandInstagram size={22} />
                   Instagram
                 </Link>
               </li>
 
               <li>
-                <Link href="#" className="flex items-center gap-3">
+                <Link
+                  href="#"
+                  className="flex items-center gap-3"
+                  target="_blank"
+                >
                   <TbBrandLinkedin size={22} />
                   Linkedin
                 </Link>
@@ -55,14 +63,21 @@ export function Footer() {
 
               <ul className="mt-8 space-y-4 text-sm">
                 <li>
-                  <Link href="#" className="text-neutral-700 font-medium">
-                    +55 00 00000-0000
+                  <Link
+                    href="https://wa.me/+5577988500766?text=Tenho%20interesse%20em%20conhecer%20melhor%20o%20seu%20produto!"
+                    target="_blank"
+                    className="text-neutral-700 font-medium"
+                  >
+                    +55 77 988500766
                   </Link>
                 </li>
 
                 <li>
-                  <Link href="#" className="text-neutral-700 font-medium">
-                    contato@symplus.com
+                  <Link
+                    href="mailto:contact@symplus.net"
+                    className="text-neutral-700 font-medium"
+                  >
+                    contact@symplus.net
                   </Link>
                 </li>
               </ul>
@@ -79,8 +94,11 @@ export function Footer() {
                 </li>
 
                 <li>
-                  <Link href="#" className="text-neutral-700 font-medium">
-                    contato@symplus.com
+                  <Link
+                    href="mailto:contact@symplus.net"
+                    className="text-neutral-700 font-medium"
+                  >
+                    contact@symplus.net
                   </Link>
                 </li>
               </ul>
@@ -97,8 +115,11 @@ export function Footer() {
                 </li>
 
                 <li>
-                  <Link href="#" className="text-neutral-700 font-medium">
-                    contato@symplus.com
+                  <Link
+                    href="mailto:contact@symplus.net"
+                    className="text-neutral-700 font-medium"
+                  >
+                    contact@symplus.net
                   </Link>
                 </li>
               </ul>
