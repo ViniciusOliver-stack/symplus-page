@@ -5,35 +5,35 @@ import Link from "next/link"
 
 const mockCardInfo = [
   {
-    title: "Entrega rápida",
+    title: "Design de Excelência",
     description:
-      "Vivamus lobortis, urna non ultricies placerat, ex quam luctus sem sed aliquet quam erat ut odio. Pellentesque habitant morbi",
-    image: "/img-entrega.svg",
+      "Design excepcional que cativa seus visitantes, combinando criatividade e precisão para uma experiência visual impactante.",
+    image: "/design.svg",
   },
   {
-    title: "Entrega rápida",
+    title: "Performance Otimizada",
     description:
-      "Vivamus lobortis, urna non ultricies placerat, ex quam luctus sem sed aliquet quam erat ut odio. Pellentesque habitant morbi",
-    image: "/img-entrega.svg",
+      "Garantimos resultados excepcionais otimizando cada detalhe, mantendo seus clientes engajados e convertendo.",
+    image: "/performance.svg",
   },
   {
-    title: "Entrega rápida",
+    title: "Atendimento Personalizado",
     description:
-      "Vivamus lobortis, urna non ultricies placerat, ex quam luctus sem sed aliquet quam erat ut odio. Pellentesque habitant morbi",
-    image: "/img-entrega.svg",
+      "Experiência personalizada para cada cliente, adaptando nossas soluções para garantir sua satisfação.",
+    image: "/atendimento-1.svg",
   },
   {
-    title: "Entrega rápida",
+    title: "Suporte ao Cliente",
     description:
-      "Vivamus lobortis, urna non ultricies placerat, ex quam luctus sem sed aliquet quam erat ut odio. Pellentesque habitant morbi",
-    image: "/img-entrega.svg",
+      "Estamos prontos para resolver suas dúvidas com precisão e simpatia. Conte conosco para uma experiência de suporte sem igual, onde sua satisfação é nossa prioridade!",
+    image: "/customer.svg",
   },
 ]
 
 export function Cards() {
   return (
     <div
-      className="w-[85%] m-auto flex flex-col md:flex-row items-center justify-center gap-8 scroll-section"
+      className="w-[85%] m-auto flex flex-col md:flex-row items-center justify-center gap-8 scroll-section mb-12"
       id="services"
     >
       <div className="md:w-[450px] flex flex-col justify-center items-center">
@@ -64,7 +64,7 @@ export function Cards() {
       <div className="flex flex-wrap md:grid md:grid-cols-2 gap-4 items-center justify-center">
         {mockCardInfo.map((card, index) => (
           <motion.div
-            className="w-fit"
+            className=""
             key={index}
             initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
